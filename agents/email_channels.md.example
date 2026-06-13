@@ -1,0 +1,26 @@
+# Email Channels (EXAMPLE)
+
+> Copy to `email_channels.md` and fill in real values. Canonical reference for your
+> distinct sending identities and the email tooling available. **Read before
+> sending or drafting any email** — never conflate accounts; verify the `From`
+> address before declaring an email done.
+
+## Identities
+
+| Address | Purpose | Default for |
+|---------|---------|-------------|
+| <you@yourcompany.com> | General business | Default outbound |
+| <outreach@yourcompany.com> | Cold outreach | Prospecting |
+| <client-account@...> | A client-provided mailbox | That client only — never business mail |
+
+## Tooling
+
+- Describe how you send/draft mail (e.g. an account-explicit IMAP draft tool, a
+  Workspace MCP with an explicit `user_email` param, etc.).
+- **Gotcha to document for yourself:** if you use a connector that doesn't take an
+  account parameter, confirm which mailbox it's bound to before trusting it.
+
+## Rule
+
+Verify the sender identity matches the purpose above before sending. When unsure
+which identity applies, ask.

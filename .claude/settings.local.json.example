@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy this file to settings.local.json (which is gitignored) and put machine-local secrets in the env block. These env vars are available to MCP servers and resolve ${VAR} references in .mcp.json. Per-user permission additions also go here.",
+  "env": {
+    "GOOGLE_OAUTH_CLIENT_ID": "your-client-id-here",
+    "GOOGLE_OAUTH_CLIENT_SECRET": "your-client-secret-here"
+  },
+  "permissions": {
+    "allow": []
+  }
+}

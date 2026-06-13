@@ -1,0 +1,13 @@
+{
+  "_comment": "MCP servers for this project. Secrets are referenced as ${VAR} and resolved from .claude/settings.local.json (gitignored) or your shell env. NEVER inline a secret here. Remove this _comment and the example server you don't use.",
+  "mcpServers": {
+    "google-workspace": {
+      "command": "uvx",
+      "args": ["workspace-mcp", "--single-user", "--tool-tier", "core"],
+      "env": {
+        "GOOGLE_OAUTH_CLIENT_ID": "${GOOGLE_OAUTH_CLIENT_ID}",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "${GOOGLE_OAUTH_CLIENT_SECRET}"
+      }
+    }
+  }
+}

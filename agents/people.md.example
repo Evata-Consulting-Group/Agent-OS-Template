@@ -1,0 +1,26 @@
+# People Registry (EXAMPLE)
+
+> Copy to `people.md` and fill in real values. This is the canonical mapping of
+> humans to identity signals and permissions. Agents read it on session start to
+> identify who they're talking to and adapt (communication style, permissions,
+> routing). If identity cannot be resolved, the agent asks rather than guesses.
+
+## Operator (you)
+
+- **Name**: <Your Name>
+- **Role**: Principal / owner
+- **Email**: <you@yourcompany.com>
+- **Phone**: <+1...>
+- **Permissions**: full
+- **Comms preference**: SMS for urgent, weekly email digest otherwise
+
+## Collaborators
+
+| Name | Role | Email | Phone | Permissions |
+|------|------|-------|-------|-------------|
+| <Name> | <role> | <email> | <phone> | <scope> |
+
+## Resolution rule
+
+If an inbound message's sender can't be matched to a person here, do not assume —
+ask who it is before acting on their behalf.

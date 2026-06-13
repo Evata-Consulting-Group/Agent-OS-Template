@@ -1,0 +1,39 @@
+# ── Secrets & credentials (NEVER commit) ──
+.env
+.env.*
+!.env.template
+credentials.json
+token.json
+*token*.json
+.secrets/
+.claude/settings.local.json
+
+# ── Private data (track in a SEPARATE private repo) ──
+personal/
+finance/
+
+# ── Disposable ──
+.tmp/
+tmp/
+*.log
+logs/
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# ── OS / editor / artifacts ──
+.DS_Store
+nul
+Thumbs.db
+*.db-wal
+*.db-shm
+
+# ── Local-only data stores (uncomment if you keep them out of git) ──
+# *.db
+# .vector_db/
+# .data/

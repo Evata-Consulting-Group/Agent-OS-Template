@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash",
+      "Bash(*)",
+      "Read",
+      "Read(*)",
+      "Edit",
+      "Edit(*)",
+      "Write",
+      "Write(*)",
+      "WebFetch",
+      "WebFetch(*)",
+      "WebSearch",
+      "WebSearch(*)",
+      "Glob",
+      "Glob(*)",
+      "Grep",
+      "Grep(*)",
+      "NotebookEdit",
+      "NotebookEdit(*)",
+      "Task",
+      "Task(*)",
+      "Agent",
+      "Agent(*)",
+      "TodoWrite",
+      "Skill",
+      "Skill(*)",
+      "ScheduleWakeup",
+      "ToolSearch"
+    ]
+  }
+}
