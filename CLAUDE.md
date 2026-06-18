@@ -278,6 +278,35 @@ After completing any coding task, automatically:
 3. Verify local and remote are in sync.
 4. Update any memory/notes for notable learnings or state changes.
 
+## Show Your Work — the Build Map
+
+After any **non-trivial build** (a new or changed workflow, tool, skill, runner, or
+multi-part feature), **present a Build Map** in the wrap-up so the operator can digest,
+verify, and critique what was built — don't bury it in prose. Two parts:
+
+**1. The table** — one row per component touched:
+
+| Component | Layer | Type | Status | Relates to |
+|---|---|---|---|---|
+
+- **Layer:** workflow · tool · skill · runner · agent · decision-rule · reference.
+- **Type** (the point of the table — make the deterministic/judgment split visible):
+  ⚙️ **deterministic** (code; same input → same output) · 🧠 **judgment** (an agent or
+  human decides each time) · 📐 **decision-contract** (pre-encoded judgment so the agent
+  decides *without asking* — criteria + default + escalation) · 📋 **reference/config**
+  (docs, settings, data). Use 🔁 for a workflow whose *steps* carry mixed tags.
+- **Status:** done · partial · planned. For a **partial** build the "Relates to" column
+  must show the seam — what's stubbed and how it connects — so nothing reads as finished
+  that isn't.
+- **Relates to:** what it calls, is called by, or depends on.
+
+**2. A one-paragraph build note** — the *how*: the key deterministic-vs-judgment calls
+and *why*. This is what lets the operator learn the reasoning and push back.
+
+`tools/build_map.py <domain-or-paths>` regenerates the table by discovering a domain's
+components (deterministic — "the UI reflects structure"). Default to presenting the Map
+in chat; persist a `BUILD_MAP.md` only for a domain complex enough to warrant it.
+
 ## Secrets
 All secrets live in `.env` and `.claude/settings.local.json` (both gitignored).
 Committed files reference them via `${VAR}`. Never inline a secret in a tracked file.
